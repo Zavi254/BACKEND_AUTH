@@ -107,4 +107,4 @@ app.get("/auth-endpoint", auth, (req, res) => {
   res.json({ message: "You are authorized to access me" });
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(process.env.PORT || 3000, () => console.log(`Example app listening on port ${port}!`));
