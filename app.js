@@ -9,13 +9,14 @@ const cors = require('cors')
 const dbConnect = require("./db/dbConnect");
 const User = require("./db/userModel");
 
-app.use(express.json());
-app.use(cors())
+
 
 const port = 3000;
 
 // execute database connection
 dbConnect();
+app.use(express.json());
+app.use(cors())
 
 
 app.get("/", (req, res) => res.send("Hello World!"));
